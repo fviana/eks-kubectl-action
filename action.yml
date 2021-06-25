@@ -1,5 +1,5 @@
 name: 'EKS kubectl'
-author: Ian Belcher
+author: fviana/Ian Belcher
 description: An action allowing you to integrate with EKS via kubectl in a Github Action, easily...
 branding:
   color: 'white'
@@ -8,6 +8,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 inputs:
+  aws_role_arn:
+    description: Your AWS_ROLE_ARN
+    required: true
   aws_access_key_id:
     description: Your AWS_ACCESS_KEY_ID
     required: true
