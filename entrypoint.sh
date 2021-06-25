@@ -13,7 +13,7 @@ aws configure --profile eks-admin set source_profile default
 aws configure --profile eks-admin set region "$INPUT_AWS_REGION"
 
 echo "Listing Clusters"
-aws eks list-clusters --profile eks-admin
+aws eks list-clusters --profile eks-admin --region "$INPUT_AWS_REGION"
 
 echo "Attempting to update kubeconfig for aws"
 aws eks --region "$INPUT_AWS_REGION" update-kubeconfig --name "$INPUT_CLUSTER_NAME" --profile eks-admin
