@@ -12,7 +12,11 @@ aws configure set role_arn "$INPUT_AWS_ROLE_ARN"
 aws configure --profile eks-admin set source_profile default
 aws configure --profile eks-admin set region "$INPUT_AWS_REGION"
 
-cat ~/.aws/*
+echo "cat ~/.aws/credentials"
+cat ~/.aws/credentials
+
+echo "cat ~/.aws/config"
+cat ~/.aws/config
 
 echo "Listing Clusters"
 aws eks list-clusters --profile eks-admin --region "$INPUT_AWS_REGION"
