@@ -10,7 +10,7 @@ for an overview if you're using a new IAM user.
 ## Example configuration
 
 You just need to supply your AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, the region your cluster is
-in and it's name
+in and it's name.
 
 ```yaml
 jobs:
